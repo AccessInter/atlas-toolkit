@@ -8,7 +8,7 @@
 
 > **Open-source patterns, tools and examples for legacy modernization** — COBOL, Delphi, BizTalk to cloud-native stacks.
 
-Maintenu par [Access International](https://access-international.dev), une ESN tunisienne qui modernise du code legacy depuis 1999. Ce toolkit capture les patterns répétables que nous avons identifiés en livrant plus de 10 POC de migration (35 524 lignes converties).
+Maintenu par [Access International](https://access-international.dev), une ESN tunisienne qui modernise du code legacy depuis 1999. Ce toolkit capture les patterns répétables que nous avons identifiés au fil de nos POC de migration.
 
 ## Pourquoi ce toolkit
 
@@ -30,28 +30,17 @@ Patterns de traduction documentés, avec exemple source → cible + tests de par
 | Delphi | TypeScript | TStringList → Array | À venir |
 | BizTalk | Azure Logic Apps | Orchestration XLANG → workflow.json | À venir |
 
-### `/tools`
-
-Petits outils de ligne de commande pour automatiser les tâches répétitives.
-
-| Outil | But |
-|---|---|
-| `parity-tester` | Compare run legacy vs run cible, identifie les discordances |
-| `discrepancy-registry` | Génère un registre signable de discordances |
-| `cobol-splitter` | Découpe un programme COBOL monolithe en modules traductibles |
-
-### `/examples`
-
-Exemples complets fonctionnels — pas des stubs.
-
-- [`examples/card-demo-cobol/`](examples/card-demo-cobol/) : application CARDDEMO (IBM sample) migrée COBOL → TypeScript Cloudflare Worker
-- Autres à venir
-
 ### `/docs`
 
 - [`docs/philosophy.md`](docs/philosophy.md) — pourquoi on documente ces patterns
-- [`docs/contributing-guide.md`](docs/contributing-guide.md) — comment proposer un nouveau pattern
-- [`docs/atlas-methodology-intro.md`](docs/atlas-methodology-intro.md) — aperçu de la méthodologie complète (intro, sans les détails propriétaires)
+
+### Roadmap
+
+Briques prévues, pas encore publiées — **contributions bienvenues** :
+
+- **`/tools`** — outils CLI : `parity-tester` (comparaison run legacy vs cible), `discrepancy-registry` (registre signable de discordances), `cobol-splitter` (découpe d'un monolithe COBOL en modules).
+- **`/examples`** — exemples complets fonctionnels, à commencer par CARDDEMO (IBM sample) migré COBOL → TypeScript.
+- Patterns supplémentaires (voir les lignes « À venir » du tableau ci-dessus).
 
 ## Quickstart
 
@@ -59,13 +48,9 @@ Exemples complets fonctionnels — pas des stubs.
 # Cloner
 git clone https://github.com/elloumima/atlas-toolkit.git
 cd atlas-toolkit
-
-# Installer deps pour les outils
-cd tools/parity-tester && npm install
-
-# Lancer un exemple
-cd ../../examples/card-demo-cobol && npm install && npm test
 ```
+
+Commencez par [`patterns/cobol/perform-loops.md`](patterns/cobol/perform-loops.md) — un premier pattern documenté (source COBOL → cible TypeScript, avec test de parité).
 
 ## Contribuer
 
