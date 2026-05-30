@@ -1,4 +1,4 @@
-**Langues :** **Français** · [English](README.en.md)
+**Languages:** [Français](README.fr.md) · **English**
 
 # ATLAS Toolkit
 
@@ -8,83 +8,98 @@
 
 > **Open-source patterns, tools and examples for legacy modernization** — COBOL, Delphi, BizTalk to cloud-native stacks.
 
-Maintenu par [Access International](https://access-international.dev), une ESN tunisienne qui modernise du code legacy depuis 1999. Ce toolkit capture les patterns répétables que nous avons identifiés au fil de nos POC de migration.
+Maintained by [Access International](https://access-international.dev), a nearshore IT services firm that has been modernizing legacy code since 1999 for clients across **North America and Europe**, with delivery centers in Tunis. This toolkit captures the repeatable patterns we identified across our migration POCs.
 
-## Pourquoi ce toolkit
+## Why this toolkit
 
-La modernisation legacy est un chantier stratégique pour des milliers d'entreprises (banques, assurances, secteur public, industrie). Pourtant, chaque programme réinvente la roue. Pas de catalogue partagé, peu de patterns documentés en open source, aucun outillage commun pour prouver la parité fonctionnelle.
+Legacy modernization is a strategic project for thousands of organizations (banks, insurance, public sector, industry). Yet every program reinvents the wheel. There is no shared catalog, few patterns documented in open source, and no common tooling to prove functional parity.
 
-**ATLAS Toolkit ouvre nos patterns**. Pas toute la méthodologie (qui reste propriétaire), mais les briques techniques réutilisables : patterns de traduction, test de parité, scaffolds de migration, règles de discordances.
+**ATLAS Toolkit opens up our patterns.** Not the entire methodology (which remains proprietary), but the reusable technical building blocks: translation patterns, parity testing, migration scaffolds, discrepancy rules.
 
-## Contenu
+## Contents
 
 ### `/patterns`
 
-Patterns de traduction documentés, avec exemple source → cible + tests de parité.
+Documented translation patterns, with source → target example plus parity tests.
 
-| Source | Cible | Pattern | Fichier |
+| Source | Target | Pattern | File |
 |---|---|---|---|
 | COBOL | TypeScript | PERFORM loops → forEach/for-of | [`patterns/cobol/perform-loops.md`](patterns/cobol/perform-loops.md) |
-| COBOL | Java | EVALUATE → switch/case | À venir |
-| COBOL | TypeScript | File I/O indexed → Map | À venir |
-| Delphi | TypeScript | TStringList → Array | À venir |
-| BizTalk | Azure Logic Apps | Orchestration XLANG → workflow.json | À venir |
+| COBOL | Java | EVALUATE → switch/case | Coming soon |
+| COBOL | TypeScript | Indexed file I/O → Map | Coming soon |
+| Delphi | TypeScript | TStringList → Array | Coming soon |
+| BizTalk | Azure Logic Apps | XLANG orchestration → workflow.json | Coming soon |
 
 ### `/docs`
 
-- [`docs/philosophy.md`](docs/philosophy.md) — pourquoi on documente ces patterns
+- [`docs/philosophy.md`](docs/philosophy.md) — why we document these patterns
 
 ### Roadmap
 
-Briques prévues, pas encore publiées — **contributions bienvenues** :
+Building blocks planned, not yet published — **contributions welcome**:
 
-- **`/tools`** — outils CLI : `parity-tester` (comparaison run legacy vs cible), `discrepancy-registry` (registre signable de discordances), `cobol-splitter` (découpe d'un monolithe COBOL en modules).
-- **`/examples`** — exemples complets fonctionnels, à commencer par CARDDEMO (IBM sample) migré COBOL → TypeScript.
-- Patterns supplémentaires (voir les lignes « À venir » du tableau ci-dessus).
+- **`/tools`** — CLI tools: `parity-tester` (legacy vs target run comparison), `discrepancy-registry` (signable discrepancy registry), `cobol-splitter` (splits a monolithic COBOL program into modules).
+- **`/examples`** — complete, working examples, starting with CARDDEMO (IBM sample) migrated COBOL → TypeScript.
+- Additional patterns (see the "Coming soon" rows in the table above).
 
 ## Quickstart
 
 ```bash
-# Cloner
+# Clone
 git clone https://github.com/AccessInter/atlas-toolkit.git
 cd atlas-toolkit
 ```
 
-Commencez par [`patterns/cobol/perform-loops.md`](patterns/cobol/perform-loops.md) — un premier pattern documenté (source COBOL → cible TypeScript, avec test de parité).
+Start with [`patterns/cobol/perform-loops.md`](patterns/cobol/perform-loops.md) — a first documented pattern (COBOL source → TypeScript target, with a parity test).
 
-## Contribuer
+## Contributing
 
-Les contributions sont **bienvenues et encouragées**. Pattern de migration trouvé qui fonctionne ? Outil utile pour comparer des runs ? Exemple pédagogique ?
+Contributions are **welcome and encouraged.** Found a migration pattern that works? A useful tool to compare runs? An educational example?
 
-Voir [`CONTRIBUTING.md`](CONTRIBUTING.md) pour le process détaillé.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the detailed process.
 
-**Bon premiers tickets** :
-- [Issues avec label `good first issue`](https://github.com/AccessInter/atlas-toolkit/labels/good%20first%20issue)
+**Good first issues:**
+- [Issues labeled `good first issue`](https://github.com/AccessInter/atlas-toolkit/labels/good%20first%20issue)
 
-## Qui utilise ce toolkit
+## Who uses this toolkit
 
 - [Access International](https://access-international.dev) (maintainer)
-- *Ajoutez votre entreprise via PR — on aime savoir*
+- *Add your company via PR — we love to know*
 
-## Stack cibles supportées
+## Supported target stacks
 
 - **TypeScript** (Cloudflare Workers, Node.js, Deno)
 - **Java 21** (Spring Boot)
 - **.NET 8** (ASP.NET Core)
-- **Python** (FastAPI, Polars pour batch)
-- **Azure Logic Apps** (pour orchestrations BizTalk)
+- **Python** (FastAPI, Polars for batch)
+- **Azure Logic Apps** (for BizTalk orchestrations)
 
-## Licence
+## Related migration guides
 
-MIT. Vous pouvez utiliser les patterns et outils dans vos projets commerciaux, sans attribution obligatoire mais appréciée.
+In-depth modernization playbooks on our site — architecture, parity strategy, and target-stack trade-offs for each path:
 
-## Liens
+- [COBOL to Java](https://access-international.dev/en/journeys/cobol-to-java/)
+- [COBOL to TypeScript](https://access-international.dev/en/journeys/cobol-to-typescript/)
+- [COBOL to .NET Core](https://access-international.dev/en/journeys/cobol-to-dotnet-core/)
+- [COBOL to Python](https://access-international.dev/en/journeys/cobol-to-python/)
+- [Delphi to .NET Core](https://access-international.dev/en/journeys/delphi-to-dotnet-core/)
+- [Delphi to Java](https://access-international.dev/en/journeys/delphi-to-java/)
+- [BizTalk to Azure Logic Apps](https://access-international.dev/en/journeys/biztalk-to-azure/)
+- [AS/400 modernization](https://access-international.dev/en/journeys/as400-modernisation/)
+- [Mainframe to AWS](https://access-international.dev/en/journeys/mainframe-to-aws/)
+- [IBM Z mainframe to Azure](https://access-international.dev/en/journeys/mainframe-ibm-to-azure/)
 
-- Site : [access-international.dev](https://access-international.dev)
-- Méthodologie complète : [access-international.dev/fr/methodologie-atlas](https://access-international.dev/fr/methodologie-atlas)
-- Contact : [access-international.dev/fr/contact](https://access-international.dev/fr/contact)
-- Twitter/X : [@accessint](https://twitter.com/accessint) *(placeholder)*
+## License
+
+MIT. You can use the patterns and tools in your commercial projects, with no required attribution — but it is appreciated.
+
+## Links
+
+- Website: [access-international.dev](https://access-international.dev)
+- Full methodology: [access-international.dev/en/atlas-methodology](https://access-international.dev/en/atlas-methodology)
+- Contact: [access-international.dev/en/contact](https://access-international.dev/en/contact)
+- Nearshore modernization for North America: [access-international.dev/en/why-tunisia](https://access-international.dev/en/why-tunisia)
 
 ---
 
-*"Le legacy qui fait tourner les banques, les assurances et les administrations n'est pas un problème à cacher — c'est un patrimoine à moderniser avec méthode."*
+*"The legacy code that runs banks, insurance companies and public administrations is not a problem to hide — it is a heritage to modernize with method."*

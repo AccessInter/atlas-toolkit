@@ -1,0 +1,105 @@
+**Langues :** **Français** · [English](README.md)
+
+# ATLAS Toolkit
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/AccessInter/atlas-toolkit?style=social)](https://github.com/AccessInter/atlas-toolkit)
+[![Contributors](https://img.shields.io/github/contributors/AccessInter/atlas-toolkit)](https://github.com/AccessInter/atlas-toolkit/graphs/contributors)
+
+> **Open-source patterns, tools and examples for legacy modernization** — COBOL, Delphi, BizTalk to cloud-native stacks.
+
+Maintenu par [Access International](https://access-international.dev), une ESN nearshore qui modernise du code legacy depuis 1999 pour des clients en **Amérique du Nord et en Europe**, avec ses centres de delivery à Tunis. Ce toolkit capture les patterns répétables que nous avons identifiés au fil de nos POC de migration.
+
+## Pourquoi ce toolkit
+
+La modernisation legacy est un chantier stratégique pour des milliers d'entreprises (banques, assurances, secteur public, industrie). Pourtant, chaque programme réinvente la roue. Pas de catalogue partagé, peu de patterns documentés en open source, aucun outillage commun pour prouver la parité fonctionnelle.
+
+**ATLAS Toolkit ouvre nos patterns**. Pas toute la méthodologie (qui reste propriétaire), mais les briques techniques réutilisables : patterns de traduction, test de parité, scaffolds de migration, règles de discordances.
+
+## Contenu
+
+### `/patterns`
+
+Patterns de traduction documentés, avec exemple source → cible + tests de parité.
+
+| Source | Cible | Pattern | Fichier |
+|---|---|---|---|
+| COBOL | TypeScript | PERFORM loops → forEach/for-of | [`patterns/cobol/perform-loops.md`](patterns/cobol/perform-loops.md) |
+| COBOL | Java | EVALUATE → switch/case | À venir |
+| COBOL | TypeScript | File I/O indexed → Map | À venir |
+| Delphi | TypeScript | TStringList → Array | À venir |
+| BizTalk | Azure Logic Apps | Orchestration XLANG → workflow.json | À venir |
+
+### `/docs`
+
+- [`docs/philosophy.md`](docs/philosophy.md) — pourquoi on documente ces patterns
+
+### Roadmap
+
+Briques prévues, pas encore publiées — **contributions bienvenues** :
+
+- **`/tools`** — outils CLI : `parity-tester` (comparaison run legacy vs cible), `discrepancy-registry` (registre signable de discordances), `cobol-splitter` (découpe d'un monolithe COBOL en modules).
+- **`/examples`** — exemples complets fonctionnels, à commencer par CARDDEMO (IBM sample) migré COBOL → TypeScript.
+- Patterns supplémentaires (voir les lignes « À venir » du tableau ci-dessus).
+
+## Quickstart
+
+```bash
+# Cloner
+git clone https://github.com/AccessInter/atlas-toolkit.git
+cd atlas-toolkit
+```
+
+Commencez par [`patterns/cobol/perform-loops.md`](patterns/cobol/perform-loops.md) — un premier pattern documenté (source COBOL → cible TypeScript, avec test de parité).
+
+## Contribuer
+
+Les contributions sont **bienvenues et encouragées**. Pattern de migration trouvé qui fonctionne ? Outil utile pour comparer des runs ? Exemple pédagogique ?
+
+Voir [`CONTRIBUTING.md`](CONTRIBUTING.md) pour le process détaillé.
+
+**Bon premiers tickets** :
+- [Issues avec label `good first issue`](https://github.com/AccessInter/atlas-toolkit/labels/good%20first%20issue)
+
+## Qui utilise ce toolkit
+
+- [Access International](https://access-international.dev) (maintainer)
+- *Ajoutez votre entreprise via PR — on aime savoir*
+
+## Stack cibles supportées
+
+- **TypeScript** (Cloudflare Workers, Node.js, Deno)
+- **Java 21** (Spring Boot)
+- **.NET 8** (ASP.NET Core)
+- **Python** (FastAPI, Polars pour batch)
+- **Azure Logic Apps** (pour orchestrations BizTalk)
+
+## Guides de migration associés
+
+Des guides de modernisation détaillés sur notre site — architecture, stratégie de parité et arbitrages de stack cible pour chaque trajectoire :
+
+- [COBOL vers Java](https://access-international.dev/fr/parcours/cobol-to-java/)
+- [COBOL vers TypeScript](https://access-international.dev/fr/parcours/cobol-to-typescript/)
+- [COBOL vers .NET Core](https://access-international.dev/fr/parcours/cobol-to-dotnet-core/)
+- [COBOL vers Python](https://access-international.dev/fr/parcours/cobol-to-python/)
+- [Delphi vers .NET Core](https://access-international.dev/fr/parcours/delphi-to-dotnet-core/)
+- [Delphi vers Java](https://access-international.dev/fr/parcours/delphi-to-java/)
+- [BizTalk vers Azure Logic Apps](https://access-international.dev/fr/parcours/biztalk-to-azure/)
+- [Modernisation AS/400](https://access-international.dev/fr/parcours/as400-modernisation/)
+- [Mainframe vers AWS](https://access-international.dev/fr/parcours/mainframe-to-aws/)
+- [Mainframe IBM Z vers Azure](https://access-international.dev/fr/parcours/mainframe-ibm-to-azure/)
+
+## Licence
+
+MIT. Vous pouvez utiliser les patterns et outils dans vos projets commerciaux, sans attribution obligatoire mais appréciée.
+
+## Liens
+
+- Site : [access-international.dev](https://access-international.dev)
+- Méthodologie complète : [access-international.dev/fr/methodologie-atlas](https://access-international.dev/fr/methodologie-atlas)
+- Contact : [access-international.dev/fr/contact](https://access-international.dev/fr/contact)
+- Modèle nearshore pour l'Amérique du Nord : [access-international.dev/fr/pourquoi-la-tunisie](https://access-international.dev/fr/pourquoi-la-tunisie)
+
+---
+
+*"Le legacy qui fait tourner les banques, les assurances et les administrations n'est pas un problème à cacher — c'est un patrimoine à moderniser avec méthode."*
