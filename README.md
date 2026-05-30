@@ -28,8 +28,8 @@ Documented translation patterns, with source → target example plus parity test
 | COBOL | TypeScript | EVALUATE → switch | [`evaluate-switch.md`](patterns/cobol/evaluate-switch.md) |
 | COBOL | TypeScript | PIC S9V99 / COMP-3 → scaled BigInt | [`decimal-arithmetic.md`](patterns/cobol/decimal-arithmetic.md) |
 | COBOL | TypeScript | Indexed file I/O → Map | [`indexed-file-io.md`](patterns/cobol/indexed-file-io.md) |
-| Delphi | TypeScript | TStringList → Array | Coming soon |
-| BizTalk | Azure Logic Apps | XLANG orchestration → workflow.json | Coming soon |
+| Delphi | TypeScript | TStringList → Array | [`tstringlist-array.md`](patterns/delphi/tstringlist-array.md) |
+| BizTalk | Azure Logic Apps | XLANG orchestration → workflow.json | [`xlang-to-logic-apps.md`](patterns/biztalk/xlang-to-logic-apps.md) |
 
 ### `/tools`
 
@@ -45,7 +45,7 @@ Building blocks planned, not yet published — **contributions welcome**:
 
 - **`/tools`** — more CLI tools: `discrepancy-registry` (signable discrepancy registry), `cobol-splitter` (splits a monolithic COBOL program into modules).
 - **`/examples`** — complete, working examples, starting with CARDDEMO (IBM sample) migrated COBOL → TypeScript.
-- Additional patterns (see the "Coming soon" rows in the table above).
+- More source languages and targets (RPG, PL/I; Java and .NET targets).
 
 ## Quickstart
 
