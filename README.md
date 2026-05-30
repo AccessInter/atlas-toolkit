@@ -24,11 +24,16 @@ Documented translation patterns, with source → target example plus parity test
 
 | Source | Target | Pattern | File |
 |---|---|---|---|
-| COBOL | TypeScript | PERFORM loops → forEach/for-of | [`patterns/cobol/perform-loops.md`](patterns/cobol/perform-loops.md) |
-| COBOL | Java | EVALUATE → switch/case | Coming soon |
-| COBOL | TypeScript | Indexed file I/O → Map | Coming soon |
+| COBOL | TypeScript | PERFORM loops → for / while | [`perform-loops.md`](patterns/cobol/perform-loops.md) |
+| COBOL | TypeScript | EVALUATE → switch | [`evaluate-switch.md`](patterns/cobol/evaluate-switch.md) |
+| COBOL | TypeScript | PIC S9V99 / COMP-3 → scaled BigInt | [`decimal-arithmetic.md`](patterns/cobol/decimal-arithmetic.md) |
+| COBOL | TypeScript | Indexed file I/O → Map | [`indexed-file-io.md`](patterns/cobol/indexed-file-io.md) |
 | Delphi | TypeScript | TStringList → Array | Coming soon |
 | BizTalk | Azure Logic Apps | XLANG orchestration → workflow.json | Coming soon |
+
+### `/tools`
+
+- [`tools/parity-tester`](tools/parity-tester) — runnable harness that checks each migrated implementation against golden values captured from the legacy behavior (`npm install && npm test` → 23 passing parity tests).
 
 ### `/docs`
 
@@ -38,7 +43,7 @@ Documented translation patterns, with source → target example plus parity test
 
 Building blocks planned, not yet published — **contributions welcome**:
 
-- **`/tools`** — CLI tools: `parity-tester` (legacy vs target run comparison), `discrepancy-registry` (signable discrepancy registry), `cobol-splitter` (splits a monolithic COBOL program into modules).
+- **`/tools`** — more CLI tools: `discrepancy-registry` (signable discrepancy registry), `cobol-splitter` (splits a monolithic COBOL program into modules).
 - **`/examples`** — complete, working examples, starting with CARDDEMO (IBM sample) migrated COBOL → TypeScript.
 - Additional patterns (see the "Coming soon" rows in the table above).
 
