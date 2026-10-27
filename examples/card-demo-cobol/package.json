@@ -1,0 +1,26 @@
+{
+  "name": "card-demo-cobol",
+  "version": "1.0.0",
+  "description": "AWS CardDemo COBOL sample ported to TypeScript on Cloudflare Workers + D1, with parity tests",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "hono": "^4.4.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "@types/node": "^22.20.5",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "wrangler": "^3.60.0"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22.13"
+  }
+}

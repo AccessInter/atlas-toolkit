@@ -1,0 +1,13 @@
+{
+  "name": "@atlas-toolkit/parity-tester",
+  "version": "0.1.0",
+  "description": "Minimal parity-testing harness for ATLAS migration patterns. Runs the migrated TypeScript implementations against golden values captured from the legacy COBOL behavior, and fails on any divergence.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  }
+}

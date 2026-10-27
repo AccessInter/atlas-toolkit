@@ -1,0 +1,9 @@
+name = "carddemo-cobol"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+# Create your own D1 database (`wrangler d1 create carddemo-db`) and paste its id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "carddemo-db"
+database_id = "00000000-0000-0000-0000-000000000000"

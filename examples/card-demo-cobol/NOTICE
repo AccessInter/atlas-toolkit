@@ -1,0 +1,6 @@
+Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+This folder contains a modified work based on AWS CardDemo
+(https://github.com/aws-samples/aws-mainframe-modernization-carddemo):
+six COBOL programs were reimplemented in TypeScript, and the sample data
+files were decoded into SQL (seed.sql).
